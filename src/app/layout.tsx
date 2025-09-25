@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Reliable Packers & Movers - Professional Moving Services",
-  description: "Professional packers and movers services. Safe, reliable, and affordable moving solutions for homes and offices. Get free quotes today!",
-  keywords: "packers and movers, moving services, relocation, home moving, office moving, professional movers",
+  title: "Western Packers & Movers - Professional Moving Services",
+  description: "Western Packers & Movers - Professional packers and movers services. Safe, reliable, and affordable moving solutions for homes and offices across India. Get free quotes today!",
+  keywords: "western packers movers, packers and movers pune, moving services, relocation, household shifting, local moving, domestic moving, car transport, bike transport, warehousing",
 };
 
 export default function RootLayout({

@@ -3,14 +3,18 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-orange-100 to-orange-300">
       {/* Navigation */}
       <nav className="bg-white shadow-lg fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <h1 className="text-2xl font-bold text-blue-600">MovePro</h1>
+              <div className="flex-shrink-0 flex items-center">
+                {/* W Logo */}
+                <div className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center mr-3">
+                  <div className="text-white font-bold text-xl">W</div>
+                </div>
+                <h1 className="text-2xl font-bold text-blue-800">Western Packers & Movers</h1>
               </div>
             </div>
             <div className="hidden md:block">
@@ -29,28 +33,77 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-16 bg-gradient-to-r from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section id="home" className="pt-16 bg-gradient-to-b from-orange-100 to-orange-300 relative overflow-hidden">
+        {/* Background stars pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-2 h-2 bg-orange-400 rounded-full"></div>
+          <div className="absolute top-20 right-20 w-1 h-1 bg-orange-500 rounded-full"></div>
+          <div className="absolute top-32 left-1/4 w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
+          <div className="absolute top-40 right-1/3 w-2 h-2 bg-orange-500 rounded-full"></div>
+          <div className="absolute top-60 left-1/2 w-1 h-1 bg-orange-400 rounded-full"></div>
+          <div className="absolute top-80 right-1/4 w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Professional
-                <span className="text-blue-600"> Moving Services</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-blue-800 mb-6">
+                Western Packers
+                <span className="block text-5xl md:text-7xl">& Movers</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Trusted packers and movers with over 10 years of experience. 
-                We make your relocation stress-free and seamless.
+              <p className="text-xl text-blue-700 mb-8">
+                Trusted packers and movers with professional service. 
+                We make your relocation stress-free and seamless across India.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                <button className="bg-blue-800 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-900 transition duration-300">
                   Get Free Quote
                 </button>
-                <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">
+                <button className="border-2 border-blue-800 text-blue-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 hover:text-white transition duration-300">
                   Call Now
                 </button>
               </div>
             </div>
             <div className="relative">
+              {/* Cartoon Mover Illustration */}
+              <div className="absolute -top-10 -right-10 z-10">
+                <div className="relative">
+                  {/* Mover Character */}
+                  <div className="w-32 h-40 relative">
+                    {/* Head */}
+                    <div className="w-16 h-16 bg-orange-200 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2"></div>
+                    {/* Cap */}
+                    <div className="w-20 h-8 bg-red-500 rounded-t-full absolute -top-2 left-1/2 transform -translate-x-1/2"></div>
+                    {/* Body */}
+                    <div className="w-12 h-20 bg-red-500 absolute top-12 left-1/2 transform -translate-x-1/2"></div>
+                    {/* Arms */}
+                    <div className="w-4 h-12 bg-orange-200 absolute top-14 -left-2"></div>
+                    <div className="w-4 h-12 bg-orange-200 absolute top-14 -right-2"></div>
+                    {/* Legs */}
+                    <div className="w-6 h-16 bg-red-500 absolute top-28 left-1/2 transform -translate-x-1/2"></div>
+                    {/* Belt */}
+                    <div className="w-12 h-2 bg-black absolute top-28 left-1/2 transform -translate-x-1/2"></div>
+                  </div>
+                  
+                  {/* Hand Truck with Boxes */}
+                  <div className="absolute top-20 -left-8">
+                    <div className="w-16 h-20 relative">
+                      {/* Hand truck base */}
+                      <div className="w-12 h-2 bg-blue-600 absolute bottom-0"></div>
+                      {/* Hand truck handle */}
+                      <div className="w-1 h-16 bg-blue-600 absolute right-0 top-0"></div>
+                      {/* Hand truck vertical support */}
+                      <div className="w-1 h-8 bg-blue-600 absolute right-0 bottom-2"></div>
+                      {/* Wheel */}
+                      <div className="w-4 h-4 bg-black rounded-full absolute -bottom-1 left-2"></div>
+                      {/* Boxes */}
+                      <div className="w-10 h-8 bg-amber-600 absolute -top-8 left-1"></div>
+                      <div className="w-10 h-8 bg-amber-700 absolute -top-16 left-1"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
               <div className="bg-white p-8 rounded-lg shadow-xl">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Quote</h3>
                 <form className="space-y-4">
@@ -63,13 +116,15 @@ export default function Home() {
                   <div>
                     <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                       <option>Select Service</option>
-                      <option>Home Moving</option>
-                      <option>Office Moving</option>
-                      <option>Packing Services</option>
-                      <option>Storage Services</option>
+                      <option>Household Shifting</option>
+                      <option>Local Moving</option>
+                      <option>Domestic Moving</option>
+                      <option>Car Transport</option>
+                      <option>Bike Transport</option>
+                      <option>Warehousing</option>
                     </select>
                   </div>
-                  <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                  <button type="submit" className="w-full bg-blue-800 text-white py-3 rounded-lg font-semibold hover:bg-blue-900 transition duration-300">
                     Get Quote
                   </button>
                 </form>
@@ -83,51 +138,81 @@ export default function Home() {
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive moving solutions for homes and businesses
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">Our Services</h2>
+            <p className="text-xl text-blue-700 max-w-3xl mx-auto">
+              Professional moving services across India
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition duration-300">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-orange-200 hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Home Moving</h3>
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">Household Shifting</h3>
               <p className="text-gray-600">Complete residential moving services with professional packing and unpacking.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition duration-300">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-orange-200 hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Office Moving</h3>
-              <p className="text-gray-600">Efficient office relocation with minimal business disruption.</p>
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">Local Moving</h3>
+              <p className="text-gray-600">Efficient local relocation services within your city.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition duration-300">
-              <div className="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-orange-200 hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Packing Services</h3>
-              <p className="text-gray-600">Professional packing with high-quality materials and careful handling.</p>
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">Domestic Moving</h3>
+              <p className="text-gray-600">Long-distance moving services across India with safe transportation.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition duration-300">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-orange-200 hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1a1 1 0 001-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">Car Transport</h3>
+              <p className="text-gray-600">Safe and secure car transportation services across India.</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-orange-200 hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">Bike Transport</h3>
+              <p className="text-gray-600">Professional motorcycle and bike transportation services.</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-orange-200 hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Storage Solutions</h3>
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">Warehousing Facility</h3>
               <p className="text-gray-600">Secure storage facilities for short and long-term storage needs.</p>
+            </div>
+          </div>
+          
+          {/* Service Coverage */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-orange-100 to-orange-200 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-blue-800 mb-4">Service Coverage</h3>
+              <p className="text-xl text-blue-700 font-semibold">ALL OVER INDIA</p>
             </div>
           </div>
         </div>
@@ -248,7 +333,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-blue-600">
+      <section id="contact" className="py-20 bg-blue-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
@@ -258,25 +343,57 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <svg className="w-6 h-6 text-blue-200 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <span className="text-blue-100">+917015399166</span>
+              
+              {/* Contact Persons */}
+              <div className="space-y-6 mb-8">
+                <div className="bg-blue-700 p-4 rounded-lg">
+                  <h4 className="text-lg font-semibold text-white mb-2">Debilal Agarwal</h4>
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-blue-200 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span className="text-blue-100">9834858851</span>
+                  </div>
                 </div>
-                <div className="flex items-center">
-                  <svg className="w-6 h-6 text-blue-200 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <span className="text-blue-100">shivkumaraggarwal@movepro.com</span>
+                
+                <div className="bg-blue-700 p-4 rounded-lg">
+                  <h4 className="text-lg font-semibold text-white mb-2">Shivkumar Agarwal</h4>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-blue-200 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      <span className="text-blue-100">7015399166</span>
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-blue-200 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      <span className="text-blue-100">9881990902</span>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              
+              {/* Website */}
+              <div className="mb-6">
                 <div className="flex items-center">
                   <svg className="w-6 h-6 text-blue-200 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
                   </svg>
-                  <span className="text-blue-100">Dapodi, Pune</span>
+                  <span className="text-pink-400 font-semibold">www.westernpackers.com</span>
+                </div>
+              </div>
+              
+              {/* Address */}
+              <div className="flex items-start">
+                <svg className="w-6 h-6 text-blue-200 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <div className="text-blue-100">
+                  <p>Row House No. 1, Ganesh Puram Society,</p>
+                  <p>Ganesh Nagar, Dapodi, Pune-411012.</p>
                 </div>
               </div>
               
@@ -319,17 +436,24 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold text-blue-400 mb-4">MovePro</h3>
-              <p className="text-gray-300">Professional moving services you can trust. Making your relocation stress-free and seamless.</p>
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+                  <div className="text-white font-bold text-lg">W</div>
+                </div>
+                <h3 className="text-2xl font-bold text-blue-400">Western Packers & Movers</h3>
+              </div>
+              <p className="text-gray-300">Professional moving services you can trust. Making your relocation stress-free and seamless across India.</p>
             </div>
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><Link href="#" className="hover:text-blue-400">Home Moving</Link></li>
-                <li><Link href="#" className="hover:text-blue-400">Office Moving</Link></li>
-                <li><Link href="#" className="hover:text-blue-400">Packing Services</Link></li>
-                <li><Link href="#" className="hover:text-blue-400">Storage Solutions</Link></li>
+                <li><Link href="#" className="hover:text-blue-400">Household Shifting</Link></li>
+                <li><Link href="#" className="hover:text-blue-400">Local Moving</Link></li>
+                <li><Link href="#" className="hover:text-blue-400">Domestic Moving</Link></li>
+                <li><Link href="#" className="hover:text-blue-400">Car Transport</Link></li>
+                <li><Link href="#" className="hover:text-blue-400">Bike Transport</Link></li>
+                <li><Link href="#" className="hover:text-blue-400">Warehousing Facility</Link></li>
               </ul>
             </div>
             
@@ -366,7 +490,7 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2024 MovePro. All rights reserved.</p>
+            <p>&copy; 2024 Western Packers & Movers. All rights reserved.</p>
           </div>
         </div>
       </footer>
